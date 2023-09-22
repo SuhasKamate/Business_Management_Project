@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Error</title>
+	<style>
+		.mainContainer {
+			position: relative;
+			top: 80px;
+		}
+
+		.container {
+			width: 500px;
+			font-family: cursive;
+			font-weight: bold;
+		}
+
+		h1 {
+			color: rgb(246, 160, 160);
+		}
+
+		a {
+			position: relative;
+			top: 30px;
+			background-color: darkslategray;
+			padding: 3px;
+			color: white;
+			text-decoration: none;
+		}
+
+		img {
+			height: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<center>
+		<div class="mainContainer">
+			<div class="image">
+				<img src="/Images/repairImage.jpg" alt="ErrorLogo" />
+			</div>
+			<div class="container">
+				<h1>Ooops...Sorry..!!!</h1>
+				<h3>Something went Wrong....!</h3>
+				<small>Exception has Occured....!!!</small><br>
+				<small style="color: red;">1. May be you are trying to add null data which is not valid. <br /> OR <br />2 . Email is already registered..</small>
+				<br />
+				<a href="/services">Back</a>
+				<a href="http://www.google.com" target="_blank">Help</a>
+			</div>
+		</div>
+	</center>
+</body>
+
+</html>

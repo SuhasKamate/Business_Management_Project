@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+body{
+background-color: white;
+}
+
+.information
+{
+	position: relative;
+	top: 150px;
+	/*height: 700px;*/
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-family: sans-serif;	
+}
+h1{
+	color: darkgreen;
+}
+.icons
+{
+	font-size: 17px;
+	position: relative;
+	top: 150px;
+	left: 300px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 900px;
+	color: green;
+	
+}

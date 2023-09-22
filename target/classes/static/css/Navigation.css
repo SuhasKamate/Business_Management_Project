@@ -1,0 +1,53 @@
+@charset "ISO-8859-1";
+body,
+ul {
+    margin: 0;
+    padding: 0;
+  /*  overflow: hidden;*/
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    position:sticky;
+    z-index: 1;
+    top: 0px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 5px;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* transition: color 0.3s; */
+    font-size: 20px;
+}
+
+a:hover {
+    color: #66ccff ;
+    transition: 0.3s;
+}
+
+.Owner_Logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+button
+{
+    color: red;
+    border: none;
+    font-size: 20px;
+   background-color: transparent;
+}

@@ -1,0 +1,74 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: rgb(48, 47, 47);
+	background-size: inherit;
+	background-repeat: round;
+}
+
+div {
+	background-color: rgb(0, 0, 0);
+	margin-top: 10px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+
+}
+
+table {
+	width: 700px;
+	padding: 5px;
+	border: none;
+	box-shadow: 5px 5px 10px green;
+	margin-bottom: 40px;
+}
+
+
+td {
+
+	padding: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	color:antiquewhite;
+}
+
+th {
+	padding: 12px;
+	background-color: green;
+	color:black;
+}
+
+h2 {
+	color: antiquewhite;
+	padding: 20px;
+
+}
+
+.btns {
+
+	border: 1px green solid;
+	padding: 8px;
+	background-color: black;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: white;
+
+}
+
+.btns:hover {
+	background-color: green;
+	transition: 1.3s;
+}
+
+.back {
+		width: max-content;
+	color: white;
+	text-decoration: none;
+	border: 1px black solid;
+	padding: 10px;
+	background-color: darkslategray;
+	
+	position: fixed;
+	
+}
