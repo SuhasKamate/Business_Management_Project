@@ -47,10 +47,6 @@ public class AdminController {
 	@GetMapping("/adminLogin")
 	public String  getAllData(  @ModelAttribute("adminLogin") AdminLogin login, Model model)
 	{
-		/*
-		 * if(result.hasErrors()) { System.out.println("Intered...");
-		 * System.out.println(result); return "Login"; } else {
-		 */
 		String email=login.getEmail();
 		String password=login.getPassword();
 		if(adminServices.validateAdminCredentials(email, password))
@@ -135,7 +131,7 @@ public class AdminController {
 	{
 
 		this.adminServices.addAdmin(admin);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 
 	}
 
@@ -153,7 +149,7 @@ public class AdminController {
 	public String updateAdmin(@ModelAttribute Admin admin,@PathVariable("id") int id)
 	{
 		this.adminServices.update(admin, id);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 	}
 
 	//IHandling delete operation
@@ -161,7 +157,7 @@ public class AdminController {
 	public String deleteAdmin(@PathVariable("id") int id)
 	{
 		this.adminServices.delete(id);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 	}
 
 	//Invoking AddProduct Page

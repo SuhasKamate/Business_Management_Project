@@ -21,21 +21,21 @@ public class UserController
 	{
 		System.out.println(user);
 		this.services.addUser(user);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 	}
 
 	@GetMapping("/updatingUser/{id}")
 	public String updateUser(@ModelAttribute User user, @PathVariable("id") int id)
 	{
 		this.services.updateUser(user, id);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 	}
 
 	@GetMapping("/deleteUser/{id}")
 	public String deleteUser(@PathVariable("id" )int id)
 	{
 		this.services.deleteUser(id);
-		return "redirect:/services";
+		return "redirect:/admin/services";
 	}
 
 
