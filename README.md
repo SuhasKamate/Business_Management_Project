@@ -1,4 +1,4 @@
-#Business Management Web Application :
+# Business Management Web Application : <br>
 ![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
 
 ## Project Desc : Business Management Web Application 
@@ -35,7 +35,7 @@
    - You have to add one admin data manually to login as admin, So add one admin data.
     
 
-##Database :
+## Database :
 
 MySQL can be used as the database for this project. 
 The database connection can be configured in the application.properties file, with the appropriate values for the following properties:
@@ -47,11 +47,11 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 server.port=2330[Optional]
 
-##WorkFlow :
+## WorkFlow :
 
 ![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/6c2c1857-70a0-40f5-aaa9-293a3b4c87a6)
 
-##Preview :
+## Preview :
 
 ![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
 ![products](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/1302b1a5-4ebe-4d02-aac5-7539eb4a6b3b)
@@ -60,6 +60,6 @@ server.port=2330[Optional]
 ![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/89304e46-476e-4846-895b-09d49c8945af)
 ![userpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/9034a930-decb-409f-8d22-67d40eeee5a6)
 
-###Exception page
+### Exception page
 
 ![exceptionPage](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/7d097910-f56e-4201-8c5a-2b445d7f3bf9)
