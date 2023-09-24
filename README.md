@@ -30,12 +30,18 @@
 ## Installation :
 
 1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git <br>
+
 2. Import the project inside STS/Eclipse : <br>
      - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
+     
 3. Make sure in the BusinessProject directory. <br>
+
 4.Configure the database connection is application.properties (check the Database section for more information). <br>
+
 5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App. <br>
+
 6.Open http://localhost:2330/home in any browser. <br>
+
 7.Now your tables will be created in the databse. <br>
    - You have to add one admin data manually to login as admin, So add one admin data. <br>
     
@@ -44,6 +50,7 @@
 
 MySQL can be used as the database for this project. 
 The database connection can be configured in the application.properties file, with the appropriate values for the following properties: <br>
+
 spring.datasource.name=[Your Database Name] <br>
 spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name] <br>
 spring.datasource.password=[Your password] <br>
@@ -58,9 +65,6 @@ server.port=2330[Optional] <br>
 
 
 ## Preview :
-
-### HomePage 
-![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
 
 #### Products 
 ![products](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/1302b1a5-4ebe-4d02-aac5-7539eb4a6b3b)
