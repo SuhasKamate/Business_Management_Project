@@ -28,15 +28,15 @@
 
 ## Installation :
 
-1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git
-2. Import the project inside STS/Eclipse :
-     Open STS/Eclipse > file > import > maven > existing project > browse > finish .
-3. Make sure in the BusinessProject directory.
-4.Configure the database connection is application.properties (check the Database section for more information).
-5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App.
-6.Open http://localhost:2330/home in any browser.
-7.Now your tables will be created in the databse.
-   - You have to add one admin data manually to login as admin, So add one admin data.
+1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git <br>
+2. Import the project inside STS/Eclipse : <br>
+     Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
+3. Make sure in the BusinessProject directory. <br>
+4.Configure the database connection is application.properties (check the Database section for more information). <br>
+5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App. <br>
+6.Open http://localhost:2330/home in any browser. <br>
+7.Now your tables will be created in the databse. <br>
+   - You have to add one admin data manually to login as admin, So add one admin data. <br>
     
 
 ## Database :
