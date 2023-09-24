@@ -1,5 +1,6 @@
-![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/cefab989-e319-4030-aa21-bb8e7ae36ce1)#Business Management Web Application :
+#Business Management Web Application :
 ![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
+
 ## Project Desc : Business Management Web Application 
   => The Business Management web application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
           It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
@@ -14,14 +15,14 @@
 - **Thymeleaf Templates**: Utilizes Thymeleaf for dynamic HTML templates.
 - **Database Integration**: Integrated with MySQL for data storage.
 
-## Technologies Used
+## Technologies Used :
 
 - Spring Boot: Backend framework for building Java-based web applications.
 - Thymeleaf: Server-side Java template engine for dynamic HTML generation.
 - MySQL: Relational database management system for data storage.
 - IDE/Tool : Spring Tool Suite 4 (Eclipse)
 
-## Installation
+## Installation :
 
 1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git
 2. Import the project inside STS/Eclipse :
@@ -34,7 +35,7 @@
    - You have to add one admin data manually to login as admin, So add one admin data.
     
 
-##Database 
+##Database :
 
 MySQL can be used as the database for this project. 
 The database connection can be configured in the application.properties file, with the appropriate values for the following properties:
@@ -46,10 +47,12 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 server.port=2330[Optional]
 
-##WorkFlow 
+##WorkFlow :
+
 ![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/6c2c1857-70a0-40f5-aaa9-293a3b4c87a6)
 
-##Preview 
+##Preview :
+
 ![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
 ![products](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/1302b1a5-4ebe-4d02-aac5-7539eb4a6b3b)
 ![locate](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e923ba3c-f5b7-4d4a-903f-840a93c1d157)
