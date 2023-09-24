@@ -1,9 +1,11 @@
 # Business Management Web Application : <br>
 ![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
 
+
 ## Project Desc : Business Management Web Application 
   => The Business Management web application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
           It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
+
 
 ## Features  :
 
@@ -15,6 +17,7 @@
 - **Thymeleaf Templates**: Utilizes Thymeleaf for dynamic HTML templates.
 - **Database Integration**: Integrated with MySQL for data storage.
 
+
 ## Technologies Used :
 
 - Spring Boot: Backend framework for building Java-based web applications.
@@ -22,16 +25,17 @@
 - MySQL: Relational database management system for data storage.
 - IDE/Tool : Spring Tool Suite 4 (Eclipse)
 
+
 ## Installation :
 
 1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git
 2. Import the project inside STS/Eclipse :
      Open STS/Eclipse > file > import > maven > existing project > browse > finish .
 3. Make sure in the BusinessProject directory.
-4.Configure the database connection is application.properties (check the Database section for more information)
-5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App
+4.Configure the database connection is application.properties (check the Database section for more information).
+5.Run the project (by running main method is BusinessProjectApplication.java) OR right clink on the project > Run As > Spring Boot App.
 6.Open http://localhost:2330/home in any browser.
-7.Now your tables will be created in the databse
+7.Now your tables will be created in the databse.
    - You have to add one admin data manually to login as admin, So add one admin data.
     
 
@@ -39,13 +43,13 @@
 
 MySQL can be used as the database for this project. 
 The database connection can be configured in the application.properties file, with the appropriate values for the following properties:
-spring.datasource.name=[Your Database Name]
-spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name]
-spring.datasource.password=[Your password]
-spring.datasource.username=[Your username]
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.hibernate.ddl-auto=update
-server.port=2330[Optional]
+spring.datasource.name=[Your Database Name] <br>
+spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name] <br>
+spring.datasource.password=[Your password] <br>
+spring.datasource.username=[Your username] <br>
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver <br>
+spring.jpa.hibernate.ddl-auto=update <br>
+server.port=2330[Optional] <br>
 
 ## WorkFlow :
 
