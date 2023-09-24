@@ -43,7 +43,7 @@
 ## Database :
 
 MySQL can be used as the database for this project. 
-The database connection can be configured in the application.properties file, with the appropriate values for the following properties:
+The database connection can be configured in the application.properties file, with the appropriate values for the following properties: <br>
 spring.datasource.name=[Your Database Name] <br>
 spring.datasource.url=jdbc:mysql://localhost:3306/[Your Database Name] <br>
 spring.datasource.password=[Your password] <br>
