@@ -9,6 +9,7 @@
           It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
 
 
+
 ## Features  :
 
 - **Customer Management**: Easily add, update, and delete customer information.
@@ -20,12 +21,16 @@
 - **Database Integration**: Integrated with MySQL for data storage.
 
 
+
+
 ## Technologies Used :
 
 - Spring Boot: Backend framework for building Java-based web applications.
 - Thymeleaf: Server-side Java template engine for dynamic HTML generation.
 - MySQL: Relational database management system for data storage.
 - IDE/Tool : Spring Tool Suite 4 (Eclipse)
+
+
 
 
 ## Installation :
@@ -48,6 +53,8 @@
    - You have to add one admin data manually to login as admin, So add one admin data. <br>
     
 
+
+
 ## Database :
 
 MySQL can be used as the database for this project. 
@@ -61,9 +68,14 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver <br>
 spring.jpa.hibernate.ddl-auto=update <br>
 server.port=2330[Optional] <br>
 
+
+
+
 ## WorkFlow :
 
 ![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/6c2c1857-70a0-40f5-aaa9-293a3b4c87a6)
+
+
 
 
 ## Preview :
