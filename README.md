@@ -1,6 +1,7 @@
 # Business Management Web Application : <br>
 
-![home](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/068df66a-163e-413b-913f-2f66bafd814d)
+![home (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/3eac6609-a88c-4219-a44a-a87ec6d55916)
+
 
 
 ## Project Desc : Business Management Web Application 
@@ -34,7 +35,8 @@
 2. Import the project inside STS/Eclipse : <br>
      - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
      
-3. Make sure in the BusinessProject directory. <br>
+3. Make sure you are in the Business_Management_Project directory. <br>
+![packageExplorer](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/be818e01-1a2b-47da-9764-2727064faa93)
 
 4.Configure the database connection is application.properties (check the Database section for more information). <br>
 
@@ -67,13 +69,16 @@ server.port=2330[Optional] <br>
 ## Preview :
 
 #### Products 
-![products](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/1302b1a5-4ebe-4d02-aac5-7539eb4a6b3b)
+![products (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d4ed0d8a-e72d-42ee-8714-55ea521f3f76)
+
 
 #### Location 
-![locate](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e923ba3c-f5b7-4d4a-903f-840a93c1d157)
+![locateus](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d41482a8-8e80-4e2b-a1c6-07793d4e4d22)
+
 
 #### Login Page
-![login](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/3af269e3-87dd-438c-ba03-d8733b28c235)
+![logins](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d596b345-23f9-4b77-aed1-359d073d75ad)
+
 
 #### AdminPanel
 ![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/89304e46-476e-4846-895b-09d49c8945af)
