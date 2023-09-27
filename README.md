@@ -30,7 +30,7 @@
 
 ## Installation :
 
-1. Clone the repository : $ git clone https://github.com/SuhasKamate/SPRING_BOOT_PROJECT.git <br>
+1. Clone the repository : $ git clone https://github.com/SuhasKamate/Business_Management_Project.git <br>
 
 2. Import the project inside STS/Eclipse : <br>
      - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
@@ -68,6 +68,7 @@ server.port=2330[Optional] <br>
 
 ## Preview :
 
+
 #### Products 
 ![products (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d4ed0d8a-e72d-42ee-8714-55ea521f3f76)
 
@@ -83,9 +84,10 @@ server.port=2330[Optional] <br>
 #### AdminPanel
 ![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/89304e46-476e-4846-895b-09d49c8945af)
 
+
 #### UserPanel 
 ![userpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/9034a930-decb-409f-8d22-67d40eeee5a6)
 
-### Exception page
 
+### Exception page
 ![exceptionPage](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/7d097910-f56e-4201-8c5a-2b445d7f3bf9)
