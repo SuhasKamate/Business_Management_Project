@@ -95,9 +95,9 @@
 		<div th:if="${product!=null}" class="details">
 			<form action="" th:action="@{/product/order}" th:object="${product}" method="post">
 				ProductName :
-				<input type="text" value="" name="oName" th:value="${product.pname}" /><br />
+				<input type="text" value="" name="oName" th:value="${product.pname}" readonly /><br />
 				Product Price :
-				<input type="text" value="" name="oPrice" th:value="${product.pprice}" /><br />
+				<input type="text" value="" name="oPrice" th:value="${product.pprice}" readonly /><br />
 				Quqntity :
 				<input type="number" placeholder="Minimun: 1KG" min="1" name="oQuantity" /><br />
 

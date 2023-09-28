@@ -13,7 +13,6 @@ public class AdminServices
 {
 	@Autowired
 	private AdminRepository adminRepository;
-
 	
 	//Get All Admins
 	public List<Admin>getAll()
@@ -52,6 +51,7 @@ public class AdminServices
 		this.adminRepository.save(admin);
 	}
 	
+	//Validating Admin login
 	public boolean validateAdminCredentials(String email,String password)
 	{
 		Admin admin=adminRepository.findByAdminEmail(email);
