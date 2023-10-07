@@ -1,11 +1,11 @@
 # Business Management Web Application : <br>
 
-![home (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/3eac6609-a88c-4219-a44a-a87ec6d55916)
+![home (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e8db8f17-72d6-42a0-b264-def0bf883bbf)
 
 
 
 ## Project Desc : Business Management Web Application 
-  => The Business Management web application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
+  => The Business Management Web Application is a comprehensive tool designed to help businesses manage various aspects of their operations. 
           It provides a user-friendly interface for tasks like managing customer data, inventory, orders, and more.
 
 
@@ -41,7 +41,9 @@
      - Open STS/Eclipse > file > import > maven > existing project > browse > finish . <br>
      
 3. Make sure you are in the Business_Management_Project directory. <br>
-![packageExplorer](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/be818e01-1a2b-47da-9764-2727064faa93)
+
+![packageExplorer](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/3ea1eb7f-8e49-4b76-96e4-798b6b8e8715)
+
 
 4.Configure the database connection is application.properties (check the Database section for more information). <br>
 
@@ -73,7 +75,8 @@ server.port=2330[Optional] <br>
 
 ## WorkFlow :
 
-![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/6c2c1857-70a0-40f5-aaa9-293a3b4c87a6)
+![workflow](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/aea72470-49c8-41a4-8974-48737638ae19)
+
 
 
 
@@ -82,24 +85,33 @@ server.port=2330[Optional] <br>
 
 
 #### Products 
-![products (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d4ed0d8a-e72d-42ee-8714-55ea521f3f76)
+
+![products (2)](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/0496f63a-f30c-4108-91a7-966bd37b2b54)
 
 
 #### Location 
-![locateus](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d41482a8-8e80-4e2b-a1c6-07793d4e4d22)
+
+![locateus](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/30e40d74-d2f0-48cb-91b3-ea515f12c498)
+
 
 
 #### Login Page
-![logins](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/d596b345-23f9-4b77-aed1-359d073d75ad)
+
+![logins](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/9c1efb48-5b23-4a43-8c96-81d55a7b1180)
+
+
 
 
 #### AdminPanel
-![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/89304e46-476e-4846-895b-09d49c8945af)
+
+![adminpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/b89aa5ee-3f7f-4145-b063-048729e7fbe9)
 
 
 #### UserPanel 
-![userpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/9034a930-decb-409f-8d22-67d40eeee5a6)
+
+![userpanel](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/e0f81692-c049-4a2f-a78d-30d3906f4429)
 
 
 ### Exception page
-![exceptionPage](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/7d097910-f56e-4201-8c5a-2b445d7f3bf9)
+
+![exceptionPage](https://github.com/SuhasKamate/Business_Management_Project/assets/126138738/4349a429-61ff-4ecd-a463-2900874e1ea5)
