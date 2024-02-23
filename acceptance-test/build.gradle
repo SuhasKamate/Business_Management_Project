@@ -1,0 +1,81 @@
+plugins {
+      id "groovy"
+      id "idea"
+}
+
+repositories {
+   maven {
+      url pinAppsDepsRepo
+      metadataSources {
+         artifact()
+         mavenPom()
+      }
+   }
+   maven {
+      url pinAppsReleasesRepo
+      metadataSources {
+         artifact()
+         mavenPom()
+      }
+   }
+   mavenLocal()
+}
+
+ext {
+      gebVersion = '6.0'
+      spockVersion = '2.2-groovy-3.0'
+      seleniumVersion = '4.15.0'
+      webDriverManagerVersion = '5.6.2'
+}
+
+dependencies {
+      implementation 'org.codehaus.groovy:groovy-all:3.0.8'
+
+      testImplementation "org.gebish:geb-spock:${gebVersion}"
+      testImplementation "org.seleniumhq.selenium:selenium-support:${seleniumVersion}"
+      testImplementation "org.spockframework:spock-core:${spockVersion}"
+      testImplementation "org.seleniumhq.selenium:selenium-firefox-driver:${seleniumVersion}"
+      testImplementation "org.seleniumhq.selenium:selenium-chrome-driver:${seleniumVersion}"
+      testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: webDriverManagerVersion
+}
+
+test {
+      useJUnitPlatform()
+}
+
+sourceSets {
+      acceptanceTest {
+            groovy
+               {
+                     srcDirs = ['src/acceptanceTest/groovy']
+                     resources.srcDir file('src/acceptanceTest/resources')
+                     compileClasspath += sourceSets.test.compileClasspath
+                     runtimeClasspath += sourceSets.test.runtimeClasspath
+               }
+      }
+}
+
+['firefox'].each { driver ->
+      task "${driver}acceptanceTest"(type: Test) {
+         useJUnitPlatform()
+         println("Created task: ${driver}acceptanceTest")
+         testClassesDirs = sourceSets.findByName("acceptanceTest").output.classesDirs
+         classpath = sourceSets.findByName("acceptanceTest").runtimeClasspath
+
+         maxParallelForks = 1
+
+         reports {
+            html.outputLocation = reporting.file("$name/tests")
+            junitXml.outputLocation = file("$buildDir/test-results/$name")
+            html.required = true
+         }
+         outputs.upToDateWhen { false }
+         systemProperty 'geb.build.reportsDir', reporting.file("$name/geb")
+
+         systemProperty 'geb.env', driver
+
+
+      }
+}
+
+
