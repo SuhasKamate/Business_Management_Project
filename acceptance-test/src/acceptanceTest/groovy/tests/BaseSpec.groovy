@@ -1,6 +1,8 @@
-import geb.spock.GebSpec
+package tests
 
-class BaseSpec extends GebSpec{
+import geb.spock.GebReportingSpec
+
+class BaseSpec extends GebReportingSpec{
 
 
 }
