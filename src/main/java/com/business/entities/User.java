@@ -2,9 +2,6 @@ package com.business.entities;
 
 import java.util.List;
 
-import org.hibernate.annotations.Cascade;
-import org.springframework.beans.factory.annotation.Value;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,9 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
-public class User 
+@Table(name = "users")
+public class User
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,8 +67,8 @@ public class User
 	}
 	@Override
 	public String toString() {
-		return "User [u_id=" + u_id + ", uname=" + uname + ", uemail=" + uemail + ", upassword=" + upassword
-				+ ", unumber=" + unumber + ", orders=" + orders + "]";
+		return "User [u_id=" + u_id + ", uname=" + uname + ", uemail=" + uemail
+				+ ", unumber=" + unumber + "]";
 	}
 	
 

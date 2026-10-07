@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,12 @@
     <nav th:fragment="navbar()">
         <ul>
             <img src="/Images/suhas.jpg" alt="Owner_Logo" class="Owner_Logo">
-                <a href="/home" >Home</a>
-                <a href="/products"  >Products</a>
-                <a href="/location">Locate_Us <i style="color: red;" class="fa-solid fa-location-crosshairs"></i></a>
-                <a href="/about" >About_Us</a>
-                <a href="/login" >Log_In <i style="color: red;" class="fa-solid fa-right-to-bracket"></i>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="/home">Home</a>
+            <a href="/products">Products</a>
+            <a href="/location">Locate_Us <i style="color: red;" class="fa-solid fa-location-crosshairs"></i></a>
+            <a href="/about">About_Us</a>
+            <a href="/login" sec:authorize="!isAuthenticated">Log_In <i style="color: red;" class="fa-solid fa-right-to-bracket"></i></a>
         </ul>
     </nav>
-   >
 </body>
 </html>

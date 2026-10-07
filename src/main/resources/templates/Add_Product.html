@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8" />
@@ -8,14 +8,15 @@
 </head>
 
 <body>
-	<a href="/services">Back to Services</a>
+	<a href="/admin/services">Back to Services</a>
 	<div class="addProducts">
 		<h3 style="font-weight: bolder;color: seagreen;">ADD NEW PRODUCT :</h3>
 		<form action="" th:action="@{/addingProduct}" method="post">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			Product_Name :
-			<input type="text" name="pname" value="" placeholder="Enter Product Name....." /> <br />
+			<input type="text" name="pname" value="" placeholder="Enter Product Name....." required /> <br />
 			Product_Price :
-			<input type="text" name="pprice" placeholder="Enter Product Price...." /><br />
+			<input type="number" step="0.01" min="0" name="pprice" placeholder="Enter Product Price...." required /><br />
 			Product_Desc : <br />
 			<textarea name="pdescription" id="" cols="15" rows="1"
 				placeholder="Enter Product Description.."></textarea><br />

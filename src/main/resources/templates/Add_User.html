@@ -1,26 +1,28 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Document</title>
+	<title>User : Add</title>
 	<link rel="stylesheet" href="" th:href="@{/css/Add_User.css}" />
 </head>
 
 <body>
-	<a href="/services">Back to Services</a>
+	<a href="/admin/services">Back to Services</a>
 	<div class="addUser">
 		<h3 style="color: red;">ADD NEW USER/CUSTOMER</h3>
 		<form action="" th:action="@{/addingUser}" method="post">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			<label for="name">User_Name :</label>
-			<input type="text" name="uname" />
-			<label for="email" />User_Email :
-			<input type="email" name="uemail" />
+			<input type="text" name="uname" required />
+			<label for="email">User_Email :</label>
+			<input type="email" name="uemail" required />
 			<label for="telephone">User_Number :</label>
-			<input type="tel" name="unumber" pattern="[0-9]{10}"/>
-			<input type="hidden" name="upassword" value="2330" />
+			<input type="tel" name="unumber" pattern="[0-9]{10}" />
+			<label for="password">User_Password :</label>
+			<input type="password" name="upassword" minlength="4" required />
+			<button type="submit">Add_User</button>
 		</form>
-		<button type="submit">Add_User</button>
 	</div>
 </body>
 

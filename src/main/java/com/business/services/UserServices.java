@@ -1,74 +1,63 @@
 package com.business.services;
 
 import java.util.List;
-import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
-import com.business.entities.Admin;
 import com.business.entities.User;
 import com.business.repositories.UserRepository;
-@Component
-public class UserServices 
-{
-	@Autowired
-	private UserRepository userRepository;
-		
-	//Get All Users
-	public List<User> getAllUser()
-	{
-		List<User> users = (List<User>) this.userRepository.findAll();
-		return users;
+
+@Service
+public class UserServices {
+
+	private final UserRepository userRepository;
+	private final PasswordEncoder passwordEncoder;
+
+	public UserServices(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+		this.userRepository = userRepository;
+		this.passwordEncoder = passwordEncoder;
 	}
-	
-	//Get Single User
-	public User getUser(int id)
-	{
-		Optional<User> optional = this.userRepository.findById(id);
-		User user = optional.get();
-		return user;
+
+	// Get All Users
+	public List<User> getAllUser() {
+		return (List<User>) this.userRepository.findAll();
 	}
-	
-	//Get Single User By Email
-	public User getUserByEmail(String email)
-	{
-	 User user=	this.userRepository.findUserByUemail(email);
-	 return user;
+
+	// Get Single User
+	public User getUser(int id) {
+		return this.userRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("No user found with id: " + id));
 	}
-	
-	//Update
-	public void updateUser(User user,int id)
-	{
-		user.setU_id(id);
-		 this.userRepository.save(user);
+
+	// Get Single User By Email
+	public User getUserByEmail(String email) {
+		return this.userRepository.findUserByUemail(email);
 	}
-	
-	//delete single User
-	public void deleteUser(int id)
-	{
+
+	// Update User — hash a new password if one was supplied
+	public void updateUser(User user, int id) {
+		User existing = getUser(id);
+		existing.setUname(user.getUname());
+		existing.setUemail(user.getUemail());
+		existing.setUnumber(user.getUnumber());
+		if (user.getUpassword() != null && !user.getUpassword().isBlank()) {
+			existing.setUpassword(passwordEncoder.encode(user.getUpassword()));
+		}
+		this.userRepository.save(existing);
+	}
+
+	// Delete single User
+	public void deleteUser(int id) {
 		this.userRepository.deleteById(id);
 	}
 
-	//Add User
-	public void addUser(User user)
-	{
-	this.userRepository.save(user);
-	}
-	
-	public boolean validateLoginCredentials(String email,String password)
-	{
-		List<User> users = (List<User>) this.userRepository.findAll();
-		for(User u:users)
-		{
-		if(u!=null && u.getUpassword().equals(password) && u.getUemail().equals(email))
-		{
-			return true;
+	// Add User — hash the password before persisting
+	public void addUser(User user) {
+		if (user.getUpassword() == null || user.getUpassword().isBlank()) {
+			user.setUpassword("2330"); // default, change on first login
 		}
-		}
-		return false;
+		user.setUpassword(passwordEncoder.encode(user.getUpassword()));
+		this.userRepository.save(user);
 	}
-	
-	
-
 }

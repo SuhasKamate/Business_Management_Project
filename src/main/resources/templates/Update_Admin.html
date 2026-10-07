@@ -6,21 +6,24 @@
 	<link rel="stylesheet" href="" th:href="@{/css/Update_Admin.css}" />
 </head>
 <body>
-		<a href="/services">Back to Services</a>
+	<a href="/admin/services">Back to Services</a>
 	<div class="updateAdmin">
-				<h3 style="color: red;">UPDATE EXISTING ADMIN / PARTNER DETAILS</h3>
-		<form action="" th:action="@{'/updatingAdmin/'+${admin.adminId}}" th:object="${admin}">
+		<h3 style="color: red;">UPDATE EXISTING ADMIN / PARTNER DETAILS</h3>
+		<form action="" th:action="@{'/updatingAdmin/'+${admin.adminId}}" th:object="${admin}" method="post">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			Admin_Id :
-			<input type="hidden" name="adminId" th:value="${admin.adminId}" th:text="${admin.adminId}"/><br />
+			<input type="hidden" name="adminId" th:value="${admin.adminId}" th:text="${admin.adminId}" /><br />
 			Admin_Name :
-			<input type="text"  name="adminName"    th:value="${admin.adminName}"/><br />
+			<input type="text" name="adminName" th:value="${admin.adminName}" /><br />
 			Admin_Number :
-			<input type="tel"  name="adminNumber" th:value="${admin.adminNumber}" pattern="[0-9]{10}"/> <br />
+			<input type="tel" name="adminNumber" th:value="${admin.adminNumber}" pattern="[0-9]{10}" /> <br />
 			Admin_Email :
 			<input type="email" name="adminEmail" th:value="${admin.adminEmail}" /> <br />
-			
+			New_Password (leave blank to keep current) :
+			<input type="password" name="adminPassword" placeholder="New password..." /> <br />
+
 			<button type="submit">Update_Admin</button>
-			
+
 		</form>
 	</div>
 </body>

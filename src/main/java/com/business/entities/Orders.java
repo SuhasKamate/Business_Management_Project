@@ -8,20 +8,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Orders
 {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int oId;
 	private String oName;
 	private double oPrice;
 	private int oQuantity;
 	private Date orderDate;
 	private double totalAmmout;
-	
+
 	@ManyToOne
 	@JoinColumn(name="user_u_id")
 	private User user;
@@ -33,8 +32,6 @@ public class Orders
 	public void setOrderDate(Date orderDate) {
 		this.orderDate = orderDate;
 	}
-
-	
 
 	public int getoId() {
 		return oId;
@@ -75,7 +72,6 @@ public class Orders
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
 
 	public double getTotalAmmout() {
 		return totalAmmout;
@@ -90,6 +86,4 @@ public class Orders
 		return "Orders [oId=" + oId + ", oName=" + oName + ", oPrice=" + oPrice + ", oQuantity=" + oQuantity
 				+ ", orderDate=" + orderDate + ", totalAmmout=" + totalAmmout + ", user=" + user + "]";
 	}
-
-
 }

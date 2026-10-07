@@ -10,7 +10,10 @@
 </head>
 
 <body>
-	<a class="back" href="/login">Back</a>
+	<form th:action="@{/logout}" method="post" style="display:inline;">
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+		<button type="submit" class="back">Logout</button>
+	</form>
 	<center>
 		<section class="tables">
 			<div class="admins">
@@ -30,15 +33,18 @@
 						<td th:text="${admin.adminNumber}"></td>
 						<td><a style="color: blue;" href="" th:href="@{'/updateAdmin/'+${admin.adminId}}"><i
 									class="fa-solid fa-pen"></i></a><span>&nbsp;</span>
-							<a style="color: red;" href="" th:href="@{'/deleteAdmin/'+${admin.adminId}}"><i
-									class="fa-solid fa-trash"></i></a>
+							<form th:action="@{'/deleteAdmin/'+${admin.adminId}}" method="post" style="display:inline;">
+								<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+								<button type="submit" style="color: red;background:none;border:none;cursor:pointer;"><i
+										class="fa-solid fa-trash"></i></button>
+							</form>
 						</td>
 					</tr>
 				</table>
 				<a href="" class="btns" th:href="@{/addAdmin}">Add_Admin</a>
 			</div>
 
-			<div class="users" th:object="${userObject}">
+			<div class="users">
 				<h2>Users :</h2>
 				<table>
 					<tr>
@@ -55,8 +61,11 @@
 						<td th:text="${user.unumber}"></td>
 						<td><a style="color: blue;" href="" th:href="@{'/updateUser/'+${user.u_id}}"><i
 									class="fa-solid fa-pen"></i></a><span>&nbsp;</span>
-							<a style="color: red;" href="" th:href="@{'/deleteUser/'+${user.u_id}}"> <i
-									class="fa-solid fa-trash"></i></a>
+							<form th:action="@{'/deleteUser/'+${user.u_id}}" method="post" style="display:inline;">
+								<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+								<button type="submit" style="color: red;background:none;border:none;cursor:pointer;"><i
+										class="fa-solid fa-trash"></i></button>
+							</form>
 						</td>
 					</tr>
 				</table>
@@ -79,41 +88,44 @@
 						<td th:text="${product.pprice}"></td>
 						<td><a style="color: blue;" href="" th:href="@{'/updateProduct/'+${product.pid}}"><i
 									class="fa-solid fa-pen"></i></a><span>&nbsp;</span>
-							<a style="color: red;" href="" th:href="@{'/deleteProduct/'+${product.pid}}"><i
-									class="fa-solid fa-trash"></i></a>
+							<form th:action="@{'/deleteProduct/'+${product.pid}}" method="post" style="display:inline;">
+								<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+								<button type="submit" style="color: red;background:none;border:none;cursor:pointer;"><i
+										class="fa-solid fa-trash"></i></button>
+							</form>
 						</td>
 					</tr>
 				</table>
 				<a href="" class="btns" th:href="@{'/addProduct'}">Add_Product</a>
 			</div>
-			
+
 			<div class="details">
 				<h2>Orders :</h2>
-			<table >
-				<tr>
-					<th>User_Name</th>
-					<th>User_Email</th>
-					<th>Product_Name</th>
-					<th>Product_Price</th>
-					<th>Product_Quantity</th>
-					<th>Total_Ammount</th>
-					<th>Date</th>
-				</tr>
-				<tr th:each="order :${orders}">
-					<td th:text="${order.user.uname}"></td>
-					<td th:text="${order.user.uemail}"></td>
-					<td th:text="${order.oName}"></td>
-					<td th:text="${order.oPrice}"></td>
-					<td th:text="${order.oQuantity}"></td>
-					<td th:text="${order.totalAmmout}"></td>
-					<td th:text="${order.orderDate}"></td>
+				<table>
+					<tr>
+						<th>User_Name</th>
+						<th>User_Email</th>
+						<th>Product_Name</th>
+						<th>Product_Price</th>
+						<th>Product_Quantity</th>
+						<th>Total_Ammount</th>
+						<th>Date</th>
+					</tr>
+					<tr th:each="order :${orders}">
+						<td th:text="${order.user.uname}"></td>
+						<td th:text="${order.user.uemail}"></td>
+						<td th:text="${order.oName}"></td>
+						<td th:text="${order.oPrice}"></td>
+						<td th:text="${order.oQuantity}"></td>
+						<td th:text="${order.totalAmmout}"></td>
+						<td th:text="${order.orderDate}"></td>
 
-				</tr>
-			</table>
-		</div>
+					</tr>
+				</table>
+			</div>
 		</section>
 	</center>
-	
+
 </body>
 
 </html>

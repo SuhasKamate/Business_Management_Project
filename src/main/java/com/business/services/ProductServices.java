@@ -1,69 +1,53 @@
 package com.business.services;
 
 import java.util.List;
-import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.business.entities.Product;
 import com.business.repositories.ProductRepository;
-@Component
-public class ProductServices 
-{
-	@Autowired
-	private ProductRepository productRepository;
 
-	//add Product
-	public void addProduct(Product p)
-	{
+@Service
+public class ProductServices {
+
+	private final ProductRepository productRepository;
+
+	public ProductServices(ProductRepository productRepository) {
+		this.productRepository = productRepository;
+	}
+
+	// Add Product
+	public void addProduct(Product p) {
 		this.productRepository.save(p);
 	}
 
-
-	//getAll products
-	public List<Product> getAllProducts()
-	{
-		List<Product> products=(List<Product>)this.productRepository.findAll();
-		return products;
+	// Get all products
+	public List<Product> getAllProducts() {
+		return (List<Product>) this.productRepository.findAll();
 	}
 
-	//get Single Product
-	public Product getProduct(int id)
-	{
-		Optional<Product> optional = this.productRepository.findById(id);
-		Product product=optional.get();
-		return product;
+	// Get single product
+	public Product getProduct(int id) {
+		return this.productRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("No product found with id: " + id));
 	}
 
-	//update Product
-	public void updateproduct(Product p,int id)
-	{
-		p.setPid(id);
-		Optional<Product> optional = this.productRepository.findById(id);
-		Product prod=optional.get();
-
-		if(prod.getPid()==id)
-		{
-			this.productRepository.save(p);				
-		}
+	// Update product — load the managed row, mutate it, then save
+	public void updateproduct(Product p, int id) {
+		Product existing = getProduct(id);
+		existing.setPname(p.getPname());
+		existing.setPprice(p.getPprice());
+		existing.setPdescription(p.getPdescription());
+		this.productRepository.save(existing);
 	}
-	//delete product
-	public void deleteProduct(int id)
-	{
+
+	// Delete product
+	public void deleteProduct(int id) {
 		this.productRepository.deleteById(id);
 	}
 
-	//Get Product By Name
-	public Product getProductByName(String name)
-	{
-		
-		Product product= this.productRepository.findByPname(name);
-		if(product!=null)
-		{
-			return product;
-		}
-		return null;
-	
+	// Get product by name (returns null when not found)
+	public Product getProductByName(String name) {
+		return this.productRepository.findByPname(name);
 	}
 }

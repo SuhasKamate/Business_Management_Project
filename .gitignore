@@ -1,0 +1,28 @@
+# Maven
+target/
+
+# Eclipse / STS workspace metadata
+.metadata/
+.classpath
+.project
+.settings/
+.apt_generated/
+.springBeans
+.sts4-cache
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local secrets / environment
+.env
+*.local
+application-local.properties

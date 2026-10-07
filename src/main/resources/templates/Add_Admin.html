@@ -12,6 +12,7 @@
 	<div class="addAdmin">
 		<h3 style="color: red;">ADD NEW ADMIN/PARTNER</h3>
 		<form action="" th:action="@{/addingAdmin}" method="post">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			Admin_Name :
 			<input type="text" name="adminName" placeholder="Enter name..." class="adminName" minlength="2" required>
 			<br />
@@ -24,8 +25,8 @@
 			<input type="tel" name="adminNumber" placeholder="Enter 10 digit mobile number..." class="adminNumber"
 				pattern="[0-9]{10}" required /><br />
 
-
-			<input type="hidden" name="adminPassword" value="1234" />
+			Admin_Password :
+			<input type="password" name="adminPassword" placeholder="Enter password..." minlength="4" required /><br />
 			<button type="submit">Add_Admin</button>
 		</form>
 	</div>
